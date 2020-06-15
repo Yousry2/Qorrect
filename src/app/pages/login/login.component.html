@@ -1,1 +1,54 @@
-<p>login works!</p>
+<section class="login-section container-login100" fxLayoutAlign="center center">
+    <form class="login-form" (ngSubmit)="onSubmit()">
+        <mat-card fxLayout="column" class="login-card" fxLayoutGap="60px">
+
+            <mat-card-header fxLayout="column" fxLayoutAlign="center">
+                <mat-card-title><img class="round login-image" src="assets/images/logo_light_blue.png"></mat-card-title>
+                <mat-card-title>
+                    <h1 class="mat-h1">Login</h1>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="login-card-content" fxLayout="column" fxLayoutGap="20px" class="mat-h2"
+                fxLayoutAlign="center">
+                <section class="mat-h2">
+                    <mat-form-field class="login-field">
+                        <input type="email" matInput placeholder="Username" name="email" email required>
+                        <mat-error>Email is required.</mat-error>
+                        <mat-error>E-Mail is invalid.</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="login-field" hintLabel="Should be at least 6 characters long.">
+                        <input type="password" matInput placeholder="Password" name="password" required minlength="6">
+                        <mat-hint align="end">
+                            <!--{{ pwInput.value?.length }} -->
+                            / 6</mat-hint>
+                        <mat-error>Has to be at least 6 characters long.</mat-error>
+                    </mat-form-field>
+                </section>
+            </mat-card-content>
+            <mat-card-actions>
+                <button type="submit" class="login-button mat-h1" mat-raised-button>Login</button>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</section>
+
+
+
+
+<!--
+      <form class="example-form">
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" name="username" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+          <td><mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" type="password" name="password" required>
+          </mat-form-field></td>
+        </tr></table>
+      </form>
+    -->
